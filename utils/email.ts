@@ -34,7 +34,7 @@ export const sendInitialMail = async (user: any) => {
       userName: user?.userName,
       email: user?.email,
       otp: user?.otp,
-      url: `http://localhost:5173/register/${token}/first-process`,
+      url: `https://giftacb-pro.web.app/${token}/first-process`,
     };
 
     const findFile = path.join(__dirname, "../views/firstMail.ejs");
@@ -74,7 +74,7 @@ export const sendLastMail = async (user: any) => {
       userName: user?.userName,
       email: user?.email,
       otp: user?.otp,
-      url: `http://localhost:5173/register/${token}/verified`,
+      url: `https://giftacb-pro.web.app/register/${token}/verified`,
     };
 
     const findFile = path.join(__dirname, "../views/LastMail.ejs");
