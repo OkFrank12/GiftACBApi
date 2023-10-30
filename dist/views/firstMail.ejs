@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    a {
+      color: grey;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    div {
+      padding: 2px 20px;
+      border: 1px solid grey;
+      width: 100px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      cursor: default;
+    }
+  </style>
+  <body>
+    <h1>[<%= userName %>] Verify Your Account with OTP</h1>
+    <p>
+      Enter this OTP below on our website to complete your registration. <br />
+      This step is essential to confirm your identity [<%= email %>] <br />
+      and secure your account.
+    </p>
+    <div><h1 style="cursor: default;"><%= otp %></h1></div>
+    <p>
+      Get ready to experience the convenience and joy of GiftACB. <br />
+      Let's get started on this exciting gift card journey together!
+    </p>
+    <p>Click here to continue: <a href="<%= url %>"><%= url %></a></p>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const giftController_1 = require("../controller/giftController");
+const multer_1 = __importDefault(require("multer"));
+const gift = express_1.default.Router();
+const upload = (0, multer_1.default)().single("image");
+gift.route(`/:_id/create-gift`).post(giftController_1.createGiftCard);
+gift.route(`/:_id/populate`).get(giftController_1.populateGiftCard);
+gift.route(`/all-gift`).get(giftController_1.allGiftCards);
+gift.route(`/:giftID/one-gift`).get(giftController_1.oneGiftCard);
+gift.route(`/:giftID/:_id/delete`).delete(giftController_1.deleteGiftCard);
+gift.route(`/:_id/:giftID/buy-gift`).post(giftController_1.buyGiftCard);
+gift.route(`/:_id/populate-history`).get(giftController_1.populateHistory);
+gift.route(`/all-history`).get(giftController_1.viewAllHistory);
+gift.route(`/:historyID/:_id/history`).delete(giftController_1.deleteHistory);
+exports.default = gift;

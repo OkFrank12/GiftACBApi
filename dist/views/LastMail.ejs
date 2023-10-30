@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    a {
+      color: grey;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    div {
+      padding: 2px 20px;
+      border: 1px solid grey;
+      width: 100px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      cursor: default;
+    }
+  </style>
+  <body>
+    <h1>[<%= userName %>] Congratulations Your Registeration is completed</h1>
+    <p>
+      Thank you for taking the first step towards enjoying the incredible<br />
+      benefits of GiftACB! We're delighted to have you on board.
+    </p>
+    Your registration on GiftACB is almost complete, and we just need one more
+    <br />
+    quick step to ensure your account's security and provide you <br />with
+    access to our fantastic platform.
+    <p>
+      To complete your registration, please click on the link below to verify
+      your account:
+    </p>
+    <p>Verification Link: <a href="<%= url %>"><%= url %></a></p>
+    <p>
+      This simple verification process helps us confirm your identity [<%= email
+      %>]<br />
+      and safeguard your account, ensuring a safe and enjoyable experience on
+      GiftACB.
+    </p>
+  </body>
+</html>
