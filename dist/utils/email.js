@@ -44,7 +44,7 @@ const sendInitialMail = (user) => __awaiter(void 0, void 0, void 0, function* ()
             userName: user === null || user === void 0 ? void 0 : user.userName,
             email: user === null || user === void 0 ? void 0 : user.email,
             otp: user === null || user === void 0 ? void 0 : user.otp,
-            url: `https://giftacb-pro.web.app/${token}/first-process`,
+            url: `https://giftacb-pro.web.app/register/${token}/first-process`,
         };
         const findFile = path_1.default.join(__dirname, "../views/firstMail.ejs");
         const readFile = yield ejs_1.default.renderFile(findFile, passedData);

@@ -34,7 +34,7 @@ export const sendInitialMail = async (user: any) => {
       userName: user?.userName,
       email: user?.email,
       otp: user?.otp,
-      url: `https://giftacb-pro.web.app/${token}/first-process`,
+      url: `https://giftacb-pro.web.app/register/${token}/first-process`,
     };
 
     const findFile = path.join(__dirname, "../views/firstMail.ejs");
